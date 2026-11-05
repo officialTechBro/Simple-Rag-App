@@ -1,0 +1,39 @@
+# Secrets / environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+secrets/
+credentials*.json
+service-account*.json
+.npmrc
+.netrc
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Claude Code local settings
+.claude/settings.local.json
