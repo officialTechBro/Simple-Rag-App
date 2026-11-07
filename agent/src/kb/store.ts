@@ -1,8 +1,10 @@
+
 import { GoogleGenerativeAIEmbeddings } from "@langchain/google-genai"
 import { env } from "../shared/env"
 import { OpenAIEmbeddings } from "@langchain/openai"
 import {MemoryVectorStore} from "@langchain/classic/vectorstores/memory"
 import { Document } from "@langchain/core/documents"
+import { TaskType } from "@google/generative-ai"
 
 
 type Provider = "google" | "openai"
@@ -30,7 +32,8 @@ function makeGoogleEmbeddings() {
 
     return new GoogleGenerativeAIEmbeddings({
         apiKey: key,
-        model: "gemini-embedding-001"
+        model: "gemini-embedding-001",
+        taskType: TaskType.RETRIEVAL_DOCUMENT
     })
 }
 
